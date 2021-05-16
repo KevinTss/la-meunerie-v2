@@ -1,28 +1,29 @@
 module.exports = {
   siteMetadata: {
-    title: "la-meunerie",
+    title: 'la-meunerie',
+    siteUrl: 'https://la-meunerie.be',
   },
   plugins: [
-    "gatsby-plugin-netlify-cms",
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
+    'gatsby-plugin-netlify-cms',
+    'gatsby-plugin-styled-components',
+    'gatsby-plugin-image',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sitemap',
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: "G-NRXQ1QNBKL",
+        trackingId: 'G-NRXQ1QNBKL',
       },
     },
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: 'images',
+        path: './src/images/',
       },
-      __key: "images",
+      __key: 'images',
     },
   ],
 };
