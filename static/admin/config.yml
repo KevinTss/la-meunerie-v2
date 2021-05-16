@@ -14,3 +14,4 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Description, name: decription, widget: markdown }
+          - { label: Image, name: slide-image, widget: 'image' }
