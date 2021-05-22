@@ -36,6 +36,29 @@ export default function HTML(props) {
         `,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `JotForm.showJotFormPowered = "new_footer";`,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `JotForm.poweredByText = "Powered by JotForm";`,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `var all_spc = document.querySelectorAll("form[id='211353710035038'] .si" + "mple" + "_spc");
+            for (var i = 0; i < all_spc.length; i++)
+            { all_spc[i].value = "211353710035038-211353710035038";
+            } `,
+          }}
+        />
+        <script
+          dangerouslySetInnerHTML={{ __html: `JotForm.forwardToEu=true;` }}
+        />
+        <script src='https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.25491' />
+        <script src='https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.25491' />
       </body>
     </html>
   );

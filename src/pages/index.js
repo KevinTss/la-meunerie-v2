@@ -1,187 +1,173 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 
 import Layout from '../components/layout';
 
-// styles
 const pageStyles = {
   color: '#232129',
   padding: 96,
   fontFamily: '-apple-system, Roboto, sans-serif, serif',
 };
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-const headingAccentStyles = {
-  color: '#663399',
-};
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: '#8A6534',
-  padding: 4,
-  backgroundColor: '#FFF4DB',
-  fontSize: '1.25rem',
-  borderRadius: 4,
-};
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-};
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-};
 
-const linkStyle = {
-  color: '#8954A8',
-  fontWeight: 'bold',
-  fontSize: 16,
-  verticalAlign: '5%',
-};
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: 'none',
-  marginBottom: 24,
-};
-
-const descriptionStyle = {
-  color: '#232129',
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-};
-
-const docLink = {
-  text: 'Documentation',
-  url: 'https://www.gatsbyjs.com/docs/',
-  color: '#8954A8',
-};
-
-const badgeStyle = {
-  color: '#fff',
-  backgroundColor: '#088413',
-  border: '1px solid #088413',
-  fontSize: 11,
-  fontWeight: 'bold',
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: '4px 6px',
-  display: 'inline-block',
-  position: 'relative',
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-};
-
-// data
-const links = [
-  {
-    text: 'Tutorial',
-    url: 'https://www.gatsbyjs.com/docs/tutorial/',
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: '#E95800',
-  },
-  {
-    text: 'How to Guides',
-    url: 'https://www.gatsbyjs.com/docs/how-to/',
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: '#1099A8',
-  },
-  {
-    text: 'Reference Guides',
-    url: 'https://www.gatsbyjs.com/docs/reference/',
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: '#BC027F',
-  },
-  {
-    text: 'Conceptual Guides',
-    url: 'https://www.gatsbyjs.com/docs/conceptual/',
-    description:
-      'Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.',
-    color: '#0D96F2',
-  },
-  {
-    text: 'Plugin Library',
-    url: 'https://www.gatsbyjs.com/plugins',
-    description:
-      'Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.',
-    color: '#8EB814',
-  },
-  {
-    text: 'Build and Host',
-    url: 'https://www.gatsbyjs.com/cloud',
-    badge: true,
-    description:
-      'Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!',
-    color: '#663399',
-  },
-];
-
-// markup
 const IndexPage = () => {
+  const [emailValue, setEmailValue] = useState('');
+  const [messageValue, setMessageValue] = useState('');
+
   return (
     <Layout>
       <main style={pageStyles}>
         <title>Home Page</title>
-        <h1 style={headingStyles}>
-          Congratulations
-          <br />
-          <span style={headingAccentStyles}>
-            — you just made a Gatsby site!{' '}
-          </span>
-          <span role='img' aria-label='Party popper emojis'>
-            🎉🎉🎉
-          </span>
-        </h1>
-        <p style={paragraphStyles}>
-          Edit <code style={codeStyles}>src/pages/index.js</code> to see this
-          page update in real-time.{' '}
-          <span role='img' aria-label='Sunglasses smiley emoji'>
-            😎
-          </span>
-        </p>
-        <ul style={listStyles}>
-          <li style={docLinkStyle}>
-            <a
-              style={linkStyle}
-              href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-            >
-              {docLink.text}
-            </a>
-          </li>
-          {links.map((link) => (
-            <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-              <span>
-                <a
-                  style={linkStyle}
-                  href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+        <form
+          className='jotform-form'
+          action='https://submit.jotformeu.com/submit/211353710035038/'
+          method='post'
+          name='form_211353710035038'
+          id='211353710035038'
+          acceptCharset='utf-8'
+          autoComplete='on'
+        >
+          <input type='hidden' name='formID' value='211353710035038' readOnly />
+          <input type='hidden' id='JWTContainer' value='' readOnly />
+          <input type='hidden' id='cardinalOrderNumber' value='' readOnly />
+          <div role='main' className='form-all'>
+            <ul className='form-section page-section'>
+              <li
+                id='cid_1'
+                className='form-input-wide'
+                data-type='control_head'
+              >
+                <div className='form-header-group header-large'>
+                  <div className='header-text httal htvam'>
+                    <h1
+                      id='header_1'
+                      className='form-header'
+                      data-component='header'
+                    >
+                      Form
+                    </h1>
+                  </div>
+                </div>
+              </li>
+              <li className='form-line' data-type='control_email' id='id_3'>
+                <label
+                  className='form-label form-label-top form-label-auto'
+                  id='label_3'
+                  htmlFor='input_3'
                 >
-                  {link.text}
-                </a>
-                {link.badge && (
-                  <span style={badgeStyle} aria-label='New Badge'>
-                    NEW!
+                  Email
+                </label>
+                <div id='cid_3' className='form-input-wide' data-layout='half'>
+                  <span
+                    className='form-sub-label-container'
+                    // style='vertical-align:top'
+                  >
+                    <input
+                      type='email'
+                      id='input_3'
+                      name='q3_email'
+                      className='form-textbox validate[Email]'
+                      // style='width:310px'
+                      size='310'
+                      value={emailValue}
+                      onInput={(e) => setEmailValue(e.target.value)}
+                      data-component='email'
+                      aria-labelledby='label_3 sublabel_input_3'
+                    />
+                    <label
+                      className='form-sub-label'
+                      htmlFor='input_3'
+                      id='sublabel_input_3'
+                      // style='min-height:13px'
+                      aria-hidden='false'
+                    >
+                      example@example.com
+                    </label>
                   </span>
-                )}
-                <p style={descriptionStyle}>{link.description}</p>
+                </div>
+              </li>
+              <li className='form-line' data-type='control_textarea' id='id_4'>
+                <label
+                  className='form-label form-label-top form-label-auto'
+                  id='label_4'
+                  htmlFor='input_4'
+                >
+                  Message
+                </label>
+                <div id='cid_4' className='form-input-wide' data-layout='full'>
+                  <textarea
+                    id='input_4'
+                    className='form-textarea'
+                    name='q4_message'
+                    // style='width:648px;height:163px'
+                    data-component='textarea'
+                    aria-labelledby='label_4'
+                    value={messageValue}
+                    onChange={(e) => setMessageValue(e.target.value)}
+                  ></textarea>
+                </div>
+              </li>
+              <li className='form-line' data-type='control_button' id='id_2'>
+                <div id='cid_2' className='form-input-wide' data-layout='full'>
+                  <div
+                    data-align='auto'
+                    className='form-buttons-wrapper form-buttons-auto jsTest-button-wrapperField'
+                  >
+                    <button
+                      id='input_2'
+                      type='submit'
+                      className='form-submit-button submit-button jf-form-buttons jsTest-submitField'
+                      data-component='button'
+                      data-content=''
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li style={{ display: 'none' }}>
+                Should be Empty:{' '}
+                <input type='text' name='website' value='' readOnly />
+              </li>
+            </ul>
+          </div>
+          <input
+            type='hidden'
+            className='simple_spc'
+            id='simple_spc'
+            name='simple_spc'
+            value='211353710035038'
+            readOnly
+          />
+          <div className='formFooter-heightMask'> </div>
+          <div className='formFooter f6'>
+            <div className='formFooter-wrapper formFooter-leftSide'>
+              <a
+                href='https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=211353710035038&utm_content=jotform_logo&utm_campaign=powered_by_jotform_le'
+                target='_blank'
+                className='formFooter-logoLink'
+                rel='noreferrer'
+              >
+                <img
+                  className='formFooter-logo'
+                  src='https://cdn.jotfor.ms/assets/img/logo/logo-new@1x.png'
+                  alt='Jotform Logo'
+                />
+              </a>
+            </div>
+            <div className='formFooter-wrapper formFooter-rightSide'>
+              <span className='formFooter-text'>
+                Now create your own JotForm - It's free!
               </span>
-            </li>
-          ))}
-        </ul>
-        <img
-          alt='Gatsby G Logo'
-          src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-        />
+              <a
+                className='formFooter-button'
+                href='https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=211353710035038&utm_content=jotform_button&utm_campaign=powered_by_jotform_le'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Create your own JotForm
+              </a>
+            </div>
+          </div>
+        </form>
       </main>
     </Layout>
   );
